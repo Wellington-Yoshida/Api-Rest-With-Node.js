@@ -1,9 +1,8 @@
-const Pool = require('pg').Pool;
-
-const pool = new Pool({
-    user: 'root',
-    host: 'localhost',
-    database: 'db-api-node-atividades',
-    password: 'root',
-    port: 5432
-})
+module.exports = {
+  username: 'root',
+  password: 'root',
+  database: 'db-api-node-atividades',
+  host: 'localhost',
+  port: 5432,
+  dialect: 'postgres'
+}
