@@ -4,5 +4,8 @@ module.exports = {
   database: 'db-api-node-atividades',
   host: 'localhost',
   port: 5432,
-  dialect: 'postgres'
+  dialect: 'postgres',
+  define: {
+    underscored: true
+  },
 }
