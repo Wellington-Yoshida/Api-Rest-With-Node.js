@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "api-node-atividade",
   "version": "1.0.0",
   "description": "",
   "main": "loader.js",
@@ -10,13 +10,9 @@
   "author": "Issami Yoshida",
   "license": "ISC",
   "dependencies": {
-    "body-parse": "^0.1.0",
     "express": "^4.17.1",
-    "express-query-int": "^3.0.0",
-    "lodash": "^4.17.15",
     "pg": "^8.0.0",
     "pg-hstore": "^2.3.3",
-    "pm2": "^4.2.3",
     "sequelize": "^5.21.5"
   },
   "devDependencies": {

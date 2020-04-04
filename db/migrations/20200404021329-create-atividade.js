@@ -9,7 +9,7 @@ module.exports = {
             primaryKey: true,
             type: Sequelize.INTEGER,
           },
-          atividade: {
+          descricao: {
             allowNull: false,
             type: Sequelize.STRING,
           },

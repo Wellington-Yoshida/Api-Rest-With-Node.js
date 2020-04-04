@@ -1,0 +1,41 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "db-api-node-atividades",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": 5432,
+    "define": {
+      "underscored": true,
+      "freezeTableName": true,
+      "timestamps": false
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "db-api-node-atividades",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": 5432,
+    "define": {
+      "underscored": true,
+      "freezeTableName": true,
+      "timestamps": false
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "db-api-node-atividades",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": 5432,
+    "define": {
+      "underscored": true,
+      "freezeTableName": true,
+      "timestamps": false
+    }
+  }
+}
