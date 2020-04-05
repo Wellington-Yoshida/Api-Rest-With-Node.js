@@ -23,7 +23,7 @@ const updateAtividade = (req, resp, next) => {
     }
 }
 
-function isCamposValidos(req, resp) {
+const isCamposValidos = (req, resp) => {
     if (!atividadeChecker.verificaCamposObrigatorios(req)) {
         atividadeHelper.formataMesageErrorAtividade(resp)
         return false;
@@ -36,4 +36,5 @@ module.exports = {
     findAllAtividades,
     deleteAtividadeById,
     updateAtividade,
+    isCamposValidos
 }
