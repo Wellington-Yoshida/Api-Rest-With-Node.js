@@ -1,6 +1,6 @@
 const express = require('express');
 const app = require('../config/server');
-const atividadeController = require('../controlles/atividade.controller');
+const atividadeController = require('../controlles/atividadeController');
 
 const router = express.Router();
 app.use('/api/atividade', router);

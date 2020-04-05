@@ -1,15 +1,14 @@
 const db = require('../db/models');
 
-const createAtividade = (req, resp, next) => {
-
+const saveAtividade = (req, resp) => {
     db.atividade
         .create({descricao: req.body.descricao, concluido: req.body.concluido})
         .then(retorno => resp.send(retorno))
-        .catch((err) => { throw new Error('Não foi possível cadastrar está atividade.') });
-}
+        .catch((err) => {throw new Error('Não foi possível cadastrar está atividade.') });
+    
+} 
 
-const findAllAtividade = (req, resp, next) => {
-
+const findAllAtividades = (req, resp) => { 
     db.atividade
       .findAll({
           order: ['id']
@@ -17,8 +16,7 @@ const findAllAtividade = (req, resp, next) => {
         .catch((err) => { throw new Error('Não foi localizado nenhuma atividade cadastrada.') })
 }
 
-const deleteByAtividade = (req, resp, next) => {
-
+const deleteAtividadeById = (req, resp) => {
     db.atividade
       .destroy({
           where: { id: req.params.id }
@@ -26,8 +24,7 @@ const deleteByAtividade = (req, resp, next) => {
         .catch((err) => { throw new Error('Não foi possível remover está atividade.') })
 }
 
-const updateByAtividade = (req, resp, next) => {
-
+const updateAtividade = (req, resp) => {
     db.atividade
       .update({
         descricao: req.body.descricao,
@@ -44,8 +41,8 @@ const updateByAtividade = (req, resp, next) => {
 
 
 module.exports = {
-    createAtividade,
-    findAllAtividade,
-    deleteByAtividade,
-    updateByAtividade
+    saveAtividade,
+    findAllAtividades,
+    deleteAtividadeById,
+    updateAtividade
 }
