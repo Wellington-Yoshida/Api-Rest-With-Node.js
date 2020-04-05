@@ -12,7 +12,7 @@ const findAllAtividades = (req, resp) => {
     db.atividade
       .findAll({
           order: ['id']
-      }).then(resultado => resp.send(resultado))
+      }).then(resultado => resp.status(200).send(resultado))
         .catch((err) => { throw new Error('Não foi localizado nenhuma atividade cadastrada.') })
 }
 
