@@ -1,10 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
     const Usuario = sequelize.define('usuario', {
       nome: DataTypes.STRING,
-      atividadeId: DataTypes.INTEGER
     });
     Usuario.associate = function(models) {
-        Usuario.belongsTo(models.Company, {foreignKey: 'atividadeId', as: 'atividade'})
+        Usuario.hasMany(models.Atividade, {as: 'atividades'})
     };
     return Usuario;
   }
