@@ -3,6 +3,8 @@ module.exports = (sequelize, DataTypes) => {
       descricao: DataTypes.STRING,
       concluido: DataTypes.BOOLEAN,
     });
-  
+    Atividade.associate = function(models) {
+      Atividade.hasMany(models.Usuario, {as: 'usuarios'})
+    };
     return Atividade;
   }
