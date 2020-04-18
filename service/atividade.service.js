@@ -4,7 +4,7 @@ const atividadeHelper = require('../service/helper/atividade.helper');
 
 
 const saveAtividade = (req, resp, next) => {
-    if (validaCamposObrigatiros(req, resp)) {
+    if (isCamposValidos(req, resp)) {
         atividadeDAO.saveAtividade(req, resp);
     }
 }

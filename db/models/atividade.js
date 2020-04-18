@@ -3,9 +3,10 @@ module.exports = (sequelize, DataTypes) => {
       descricao: DataTypes.STRING,
       concluido: DataTypes.BOOLEAN,
       usuarioId: DataTypes.INTEGER
-    });
-    Atividade.associate = function(models) {
-      Atividade.belongsTo(models.Company, {foreignKey: 'usuarioId', as: 'usuario'})
-  };
+    },
+    { underscored: true });
+    associate = (models) => {
+      Atividade.belongsTo(models.Usuario, {foreignKey: usuario_id, as: 'usuario'})
+    };
     return Atividade;
   }

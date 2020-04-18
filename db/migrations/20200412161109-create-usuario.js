@@ -13,14 +13,6 @@ module.exports = {
           nome: {
             allowNull: false,
             type: Sequelize.STRING,
-          },
-          atividadeId: {
-            allowNull: false,
-            type: Sequelize.INTEGER,
-            references: {         // User belongsTo Company 1:1
-              model: 'atividade',
-              key: 'id'
-            }
           }
         } 
       );
