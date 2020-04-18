@@ -2,7 +2,8 @@
 Creating Api-Rest with Node.js
 
   - Minha primeira API criada com Node.js.
-  - Api basica com apenas uma entidade e com dois campos, sendo eles descrição do tipo string e concluido do tipo boolean.
+  - Api basica com apenas duas entidade, sendo eles Usuario e Atividade com relacionamento 1:N.
   - Está conectando com banco de dados Postgresql.
-  - Estou framework EXPRESS.
+  - Estou usando framework EXPRESS.
+  - ORM estou usanod SEQUELIZE
   - Para os test foi utilizado JASMINE.
