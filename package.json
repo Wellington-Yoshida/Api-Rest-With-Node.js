@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "production": "pm2 start loader.js --name backend",
+    "test-init": "./node_modules/jasmine/bin/jasmine.js init",
     "test": "./node_modules/jasmine/bin/jasmine.js"
   },
   "author": "Issami Yoshida",

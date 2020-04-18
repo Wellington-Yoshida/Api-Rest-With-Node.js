@@ -1,4 +1,4 @@
-const validaCamposObrigatorios = (req, resp) => {
+const validaCamposObrigatorios = (req) => {
     if (req.body.nome != null
         && req.body.nome.trim() != '') {
             return true;

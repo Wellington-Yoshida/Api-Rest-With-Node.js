@@ -13,7 +13,8 @@ function createDtoAtividadeSUCESS() {
     return req = {
         body: {
             descricao: "Estudando Jasmine",
-            concluido: false
+            concluido: false,
+            usuarioId: 1
         }
     }
 }
