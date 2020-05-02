@@ -3,7 +3,7 @@ const verificaCamposObrigatorios = function(req) {
         && req.body.descricao !== ''
         && req.body.descricao.trim() !== '' 
         && req.body.concluido != null
-        && req.body.usuarioId != null) {
+        && req.body.usuario_id != null) {
             return true;
     }
     return false;

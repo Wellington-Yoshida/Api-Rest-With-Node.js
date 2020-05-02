@@ -1,9 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
-    const Usuario = sequelize.define('usuario', {
+    const usuario = sequelize.define('usuario', {
       nome: DataTypes.STRING,
     },{ underscored: true });
-    associate = (models) => {
-        Usuario.hasMany(models.Atividade, {as: 'atividades'})
+    usuario.associate  = (models) => {
+      usuario.hasMany(models.atividade, {as: 'atividades', foreignKey: 'usuario_id'})
     };
-    return Usuario;
+    return usuario;
   }

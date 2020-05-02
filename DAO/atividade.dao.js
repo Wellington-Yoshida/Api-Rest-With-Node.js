@@ -2,7 +2,7 @@ const db = require('../db/models');
 
 const saveAtividade = (req, resp) => {
     db.atividade
-        .create({descricao: req.body.descricao, concluido: req.body.concluido, usuarioId: req.body.usuarioId})
+        .create({descricao: req.body.descricao, concluido: req.body.concluido, usuario_id: req.body.usuario_id})
         .then(retorno => resp.send(retorno))
         .catch((err) => {throw new Error('Não foi possível cadastrar está atividade.') });
     

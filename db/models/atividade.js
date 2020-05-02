@@ -1,12 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
-    const Atividade = sequelize.define('atividade', {
+    const atividade = sequelize.define('atividade', {
       descricao: DataTypes.STRING,
       concluido: DataTypes.BOOLEAN,
-      usuarioId: DataTypes.INTEGER
+      usuario_id: DataTypes.INTEGER
     },
     { underscored: true });
-    associate = (models) => {
-      Atividade.belongsTo(models.Usuario, {foreignKey: usuario_id, as: 'usuario'})
+    atividade.associate = (models) => {
+      atividade.belongsTo(models.usuario, {as: 'usuario', foreignKey: 'usuario_id'})
     };
-    return Atividade;
+    return atividade;
   }
