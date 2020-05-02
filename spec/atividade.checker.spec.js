@@ -14,7 +14,7 @@ function createDtoAtividadeSUCESS() {
         body: {
             descricao: "Estudando Jasmine",
             concluido: false,
-            usuarioId: 1
+            usuario_id: 1
         }
     }
 }
