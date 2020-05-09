@@ -19,6 +19,7 @@ function createDtoUsuarioSUCESS() {
 describe('validaCamposObrigatorios', () => {
     it('deve retornar true caso todos os campos obrigatorios estiverem preenchidos corretamente', () => {
         const req = createDtoUsuarioSUCESS();
+
         expect(usuarioChecker.validaCamposObrigatorios(req)).toEqual(true);
     })
 })
@@ -26,6 +27,7 @@ describe('validaCamposObrigatorios', () => {
 describe('validaCamposObrigatorios', () => {
     it('deve retornar false quando campos obrigatórios não estiverem preenchidos corretamente', () => {
         const req = createDtoUsuarioERROR();
+        
         expect(usuarioChecker.validaCamposObrigatorios(req)).toEqual(false);
     })
 })
